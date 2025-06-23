@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Open Weather</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+
+<body>
+    <%- include("header") %>
+        <h1 style="text-align: center">☀⛅🌦</h1>
+        <fieldset>
+            <form action="/" method="POST">
+                <label for="zip">Enter zip code:</label><br />
+                <input type="text" id="zip" name="zip" /><br />
+                <input type="submit" value="Submit" />
+            </form>
+        </fieldset>
+        <h1 style="text-align: center">Current Weather</h1>
+        <div id="box-1">
+            <table>
+                <tr>
+                    <th>Current Conditions</th>
+                    <th>Temp</th>
+                    <th>Feels Like</th>
+                    <th>Humidity</th>
+                    <th>Pressure</th>
+                    <th>Wind Speed</th>
+                    <th>Wind Degree</th>
+                    <th>Clouds</th>
+                    <th>Sunrise</th>
+                    <th>Sunset</th>
+                    <th>Timezone</th>
+                    <th>Location</th>
+                </tr>
+    
+                <tr>
+                    <% if (typeof weather !=="undefined" ) { %>
+                        <% for (let i=0; i < 1; i++) { %>
+                            <td><%= weather[0].main %></td>                     
+                            <td><%= main.temp %></td>
+                            <td><%= main.feels_like %></td>
+                            <td><%= main.humidity %></td>
+                            <td><%= main.pressure %></td>
+                            <td><%= wind.speed %></td>
+                            <td><%= wind.deg %></td>
+                            <td><%= clouds.all %></td>
+                            <td><%= sys.sunrise %></td>
+                            <td><%= sys.sunset %></td>
+                            <td><%= timezone %></td>
+                            <td><%= name %></td>
+                            <% } %>
+                                <% } else { %>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <% } %>
+                </tr>
+            </table>
+        </div>
+
+        <h1 style="text-align: center">Five Day Forecast</h1>
+        <div id="box-2">
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Current Conditions</th>
+                    <th>Temperature</th>
+                    <th>Feels Like</th>
+                    <th>Humidity</th>
+                    <th>Wind Speed</th>
+                    <th>Wind Degree</th>
+                    <th>Clouds</th>
+                </tr>
+    
+                <% if (typeof list !=="undefined" ) { %>
+                    <% for (let i=0; i < list.length; i=i + 8) { %>
+                        <tr>
+                            <td>
+                                <%= unixTimeConvertor(list[i].dt) %>
+                            </td>
+                            <td>
+                                <%= list[i].weather[0].description %> <br />
+                                    <img4 src="http://openweathermap.org/img/wn/<%= list[i].weather[0].icon %>@2x.png"
+                                        style="width: 50px; height: 50px" />
+                            </td>
+                            <td>
+                                <%= list[i].main.temp %>
+                            </td>
+                            <td>
+                                <%= list[i].main.feels_like %>
+                            </td>
+                            <td>
+                                <%= list[i].main.humidity %>%
+                            </td>
+                            <td>
+                                <%= list[i].wind.speed %>mph
+                            </td>
+                            <td>
+                                <%= list[i].wind.deg %>
+                            </td>
+                            <td>
+                                <%= list[i].clouds.all %>
+                            </td>
+                            <% } %>
+                                <% } else { %>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <% } %>
+                        </tr>
+            </table>
+        </div>
+
+</body>
+
+</html>
