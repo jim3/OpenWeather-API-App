@@ -1,4 +1,4 @@
-### [OpenWeatherMap API](https://openweathermap.org/api) App
+### [OpenWeatherMap API](https://openweathermap.org/api)
 
 ### Description
 
