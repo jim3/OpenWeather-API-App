@@ -12,3 +12,9 @@ A full-stack Node.js application that uses Node.js, Express.js, EJS templating e
 -   [Node.js](https://nodejs.org/en/)
 -   [Express](https://expressjs.com/) framework
 -   [EJS](https://ejs.co/) templating
+
+---
+
+### Example
+
+![Alt text for your GIF](https://github.com/jim3/OpenWeather-API-App/blob/main/openweather.gif?raw=true)
