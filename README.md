@@ -15,6 +15,6 @@ A full-stack Node.js application that uses Node.js, Express.js, EJS templating e
 
 ---
 
-### Example
+### Screen Recording Example
 
 ![Alt text for your GIF](https://github.com/jim3/OpenWeather-API-App/blob/main/openweather.gif?raw=true)
