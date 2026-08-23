@@ -2,7 +2,7 @@
 
 ### Description
 
-An older project, (a couple of years back?) my first real attempt at working with API's and my introduction to "full-stack" using Node.js/Express.js...
+An older project, (a couple of years back?) my first real attempt at working with API's and my introduction to "full-stack" using Node.js/Express.js
 
 A full-stack Node.js application that uses Node.js, Express.js, EJS templating engine and the OpenWeather API to retrieve the current weather and five-day forecast for a given city.
 
