@@ -2,7 +2,9 @@
 
 ### Description
 
-An older project, (2-3 years back?) my first real attempt at working with API's and my introduction to "full-stack" using Node.js/Express.js. The real surprising part, is this still works with no issues when doing `npm install`. Try the same thing with an older Python project and you'll see why this is a very positive thing. 
+An earlier project (~2–3 years ago) representing my first real dive into REST APIs and full-stack development with Node.js and Express.
+
+Surprisingly, the build still holds up: running `npm install` works cleanly with zero dependency conflicts or version mismatch headaches, even a few years later.
 
 A full-stack Node.js application that uses Node.js, Express.js, EJS templating engine and the OpenWeather API to retrieve the current weather and five-day forecast for a given city.
 
